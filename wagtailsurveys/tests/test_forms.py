@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 from django.test import TestCase
 from django import forms
 
-from wagtail.wagtailcore.models import Page
+from wagtail.core.models import Page
 from wagtailsurveys.forms import FormBuilder
 from wagtailsurveys.tests.testapp.models import SurveyPage, SurveyField
 

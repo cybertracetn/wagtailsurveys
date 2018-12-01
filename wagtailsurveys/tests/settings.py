@@ -53,29 +53,28 @@ TEMPLATES = [
     }
 ]
 
-MIDDLEWARE_CLASSES = (
+MIDDLEWARE = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
-    'wagtail.wagtailcore.middleware.SiteMiddleware',
-    'wagtail.wagtailredirects.middleware.RedirectMiddleware',
+    'wagtail.core.middleware.SiteMiddleware',
+    'wagtail.contrib.redirects.middleware.RedirectMiddleware',
 )
 
 INSTALLED_APPS = (
     'wagtailsurveys.tests.testapp',
     'wagtailsurveys',
 
-    'wagtail.wagtailredirects',
-    'wagtail.wagtailimages',
-    'wagtail.wagtailusers',
-    'wagtail.wagtaildocs',
-    'wagtail.wagtailadmin',
-    'wagtail.wagtailcore',
+    'wagtail.contrib.redirects',
+    'wagtail.images',
+    'wagtail.users',
+    'wagtail.admin',
+    'wagtail.core',
+    'wagtail.documents',
 
     'taggit',
 

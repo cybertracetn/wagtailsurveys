@@ -4,11 +4,11 @@ from __future__ import unicode_literals
 import json
 
 from django.contrib.auth import get_user_model
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.test import TestCase
 
 from wagtail.tests.utils import WagtailTestUtils
-from wagtail.wagtailcore.models import Page
+from wagtail.core.models import Page
 
 from wagtailsurveys.models import FormSubmission
 from wagtailsurveys.tests.testapp.models import SurveyPage, CustomSubmission, SurveyField

@@ -10,8 +10,8 @@ from django.utils.encoding import smart_str
 from django.utils.translation import ugettext as _
 
 from wagtail.utils.pagination import paginate
-from wagtail.wagtailcore.models import Page
-from wagtail.wagtailadmin import messages
+from wagtail.core.models import Page
+from wagtail.admin import messages
 from wagtailsurveys.forms import SelectDateForm
 
 from wagtailsurveys.models import get_surveys_for_user

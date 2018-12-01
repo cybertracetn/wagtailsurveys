@@ -2,7 +2,7 @@ from django.conf.urls import url
 
 from wagtailsurveys import views
 
-
+app_name = 'wagtailsurveys'
 urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^submissions/(\d+)/$', views.list_submissions, name='list_submissions'),

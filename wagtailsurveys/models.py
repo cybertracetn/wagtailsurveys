@@ -13,8 +13,8 @@ from django.utils.translation import ugettext_lazy as _
 from django.utils.encoding import python_2_unicode_compatible
 from unidecode import unidecode
 
-from wagtail.wagtailadmin.edit_handlers import FieldPanel
-from wagtail.wagtailcore.models import Page, Orderable, UserPagePermissionsProxy, get_page_models
+from wagtail.admin.edit_handlers import FieldPanel
+from wagtail.core.models import Page, Orderable, UserPagePermissionsProxy, get_page_models
 
 from wagtailsurveys.forms import FormBuilder
 

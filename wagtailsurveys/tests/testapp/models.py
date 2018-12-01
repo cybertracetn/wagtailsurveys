@@ -8,8 +8,8 @@ from django.db import models
 from django.shortcuts import render
 from modelcluster.fields import ParentalKey
 
-from wagtail.wagtailadmin.edit_handlers import FieldPanel, InlinePanel
-from wagtail.wagtailcore.fields import RichTextField
+from wagtail.admin.edit_handlers import FieldPanel, InlinePanel
+from wagtail.core.fields import RichTextField
 from wagtailsurveys import models as surveys_models
 
 

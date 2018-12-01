@@ -1,6 +1,6 @@
 from __future__ import unicode_literals
 
-from wagtail.wagtailcore.models import Page
+from wagtail.core.models import Page
 from wagtailsurveys.tests.testapp.models import (
     SurveyPage, SurveyField,
     SurveyWithCustomSubmissionPage, SurveyWithCustomSubmissionFormField
