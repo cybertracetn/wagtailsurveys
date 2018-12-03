@@ -99,9 +99,15 @@ def list_submissions(request, page_id):
     for s in submissions:
         form_data = s.get_data()
         data_row = [form_data.get(name) for name, label in data_fields]
+        additional = {}
+        if hasattr(s, 'user'):
+            additional['user'] = s.user
+        if hasattr(s, 'ip'):
+            additional['ip'] = s.ip
         data_rows.append({
             "model_id": s.id,
-            "fields": data_row
+            "fields": data_row,
+            **additional
         })
 
     return render(request, 'wagtailsurveys/index_submissions.html', {

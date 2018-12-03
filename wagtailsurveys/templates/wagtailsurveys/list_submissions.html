@@ -1,32 +1,36 @@
 {% load i18n %}
 <div class="overflow">
-<table class="listing">
-    <col />
-    <col />
-    <col />
-    <thead>
-        <tr>
-            {% for heading in data_headings %}
-                <th>{{ heading }}</th>
-            {% endfor %}
-            <th>{% trans "Actions" %}</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for row in data_rows %}
+    <table class="listing">
+	<col />
+	<col />
+	<col />
+	<thead>
             <tr>
-                {% for cell in row.fields %}
-                    <td>
-                        {{ cell }}
-                    </td>
-                {% endfor %}
-                <td>
-                <a class="button button-small button-secondary" href="
-                    {% url 'wagtailsurveys:delete_submission' survey_page.id row.model_id %}">
-                    {% trans 'delete' %}</a>
-                </td>
+		{% for heading in data_headings %}
+                    <th>{{ heading }}</th>
+		{% endfor %}
+		<th>User</th>
+		<th>IP</th>
+		<th>{% trans "Actions" %}</th>		
             </tr>
-        {% endfor %}
-    </tbody>
-</table>
+	</thead>
+	<tbody>
+            {% for row in data_rows %}
+		<tr>
+                    {% for cell in row.fields %}
+			<td>
+                            {{ cell }}
+			</td>
+                    {% endfor %}
+		    <td>{{ row.user }}</td>
+		    <td>{{ row.ip }}</td>
+                    <td>
+			<a class="button button-small button-secondary" href="
+				  {% url 'wagtailsurveys:delete_submission' survey_page.id row.model_id %}">
+			    {% trans 'delete' %}</a>
+                    </td>
+		</tr>
+            {% endfor %}
+	</tbody>
+    </table>
 </div>
